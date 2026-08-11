@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
 [![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](#)
 
-A SQL + Python analysis of Walmart branch transaction data, uncovering operational patterns in staffing, seasonality, and branch performance — with a deliberate focus on statistically sound conclusions.
+A SQL + Python analysis of Walmart branch transaction data, uncovering operational patterns in staffing, seasonality, and branch performance — with a deliberate focus on data validation and reliable business conclusions.
 
 **Data source:** Walmart retail transaction dataset (Kaggle)
 
@@ -107,9 +107,9 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 **Recommendation:** Expand physical floor space for high-volume categories; avoid assuming higher margin as the driver when reallocating inventory investment.
 
 ### 4️⃣ Branch-Level YoY Revenue Decline
-**Methodology:** Year-over-year revenue comparison per branch (2022 vs. 2023), with a minimum sample size flag (≥20 transactions/year) added to distinguish reliable signals from noise.
+**Methodology:** Year-over-year revenue comparison per branch (2022 vs. 2023), with a minimum data sufficiency threshold (≥20 transactions/year) added to distinguish reliable signals from noise.
 
-**Findings:**Several branches show an apparent revenue decline, but most have very low annual transaction counts (often under 20). This makes the observed decline difficult to interpret reliably without additional data.
+**Findings:** Several branches show an apparent revenue decline, but most have very low annual transaction counts (often under 20). This makes the observed decline difficult to interpret reliably without additional data.
 
 **Insight:** Without this check, low-volume branches could have been misreported as operational "crises" based on a handful of transactions.
 
