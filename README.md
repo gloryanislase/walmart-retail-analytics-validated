@@ -79,20 +79,20 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 
 ## 🔍 Analytical Rigor
 
-This project deliberately goes beyond "run a query, report the number." During analysis, two methodological issues were identified and corrected before finalizing conclusions:
+During analysis, two methodological issues were identified and corrected before finalizing conclusions:
 
 | Issue Found | Problem | Fix Applied |
 |---|---|---|
 | **Small sample size in branch-level YoY comparison** | Several branches appeared to show a "60% revenue decline," but the underlying transaction counts were as low as 7-19 per year — far too small to be a reliable signal | Added a minimum sample size threshold (≥20 transactions/year) to flag which declines are statistically meaningful vs. likely noise |
 | **Partial-year data bias in monthly seasonality** | 2019 only contains January-March records; including it in a monthly aggregate would artificially inflate Q1 figures relative to other months | Excluded 2019 from the monthly seasonality analysis, using only complete years (2020-2023) for a fair month-to-month comparison |
 
-This second fix also led to the **strongest finding in the entire analysis** — a ~9x spike in transaction volume during November-December — which had been diluted and overlooked in the original approach.
+This second fix also led to the **strongest finding in the entire analysis** — a ~9x spike in transaction volume during November-December.
 
 ---
 
 ## 📊 Key Findings
 
-### 1️⃣ Monthly Seasonality (strongest pattern in the dataset)
+### 1️⃣ Monthly Seasonality
 **Methodology:** Transaction volume by month, aggregated across 2020-2023 (2019 excluded as a partial year).
 
 **Findings:** November and December show a dramatic spike — roughly **9x higher** than the low season (Jan-Jul). August-October show a moderate secondary rise, likely a pre-holiday buildup period.
@@ -119,7 +119,7 @@ This second fix also led to the **strongest finding in the entire analysis** —
 
 **Recommendation:** Expand physical floor space for high-volume categories; avoid assuming higher margin as the driver when reallocating inventory investment.
 
-### 4️⃣ Branch-Level YoY Revenue Decline (with sample size caveat)
+### 4️⃣ Branch-Level YoY Revenue Decline
 **Methodology:** Year-over-year revenue comparison per branch (2022 vs. 2023), with a minimum sample size flag (≥20 transactions/year) added to distinguish reliable signals from noise.
 
 **Findings:** Several branches show an apparent revenue decline, but most have very low annual transaction counts (often under 20), making the percentage changes statistically unreliable at the individual branch level.
