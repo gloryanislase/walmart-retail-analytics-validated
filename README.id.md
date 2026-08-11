@@ -164,5 +164,5 @@ Perbaikan kedua ini juga yang mengungkap **temuan paling kuat di seluruh analisi
 
 Terbuka untuk diskusi, feedback, atau peluang kolaborasi terkait proyek ini.
 
-- **LinkedIn:** [linkedin.com/in/nama-kamu](https://linkedin.com/in/nama-kamu) *(ganti dengan link profil kamu)*
-- **Email:** nama.kamu@email.com *(ganti dengan email kamu)*
+- **LinkedIn:** [linkedin.com/in/gloryanisveronicalase](https://linkedin.com/in/gloryanisveronicalase)
+- **Email:** gloryanislase@gmail.com
