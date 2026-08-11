@@ -6,7 +6,7 @@
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
 [![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](#)
 
-Analisis data transaksi cabang Walmart menggunakan SQL + Python untuk mengungkap pola operasional dalam penjadwalan staf, musiman, dan performa cabang — dengan fokus khusus pada kesimpulan yang teruji secara statistik.
+Analisis data transaksi cabang Walmart menggunakan SQL + Python untuk mengungkap pola operasional dalam penjadwalan staf, musiman, dan performa cabang.
 
 **Sumber data:** Dataset transaksi ritel Walmart (Kaggle)
 
@@ -102,7 +102,7 @@ Volume transaksi per jam, diagregasi dari seluruh dataset.
 Volume stabil rendah (300-400 transaksi) dari jam 06:00-14:00, lalu melonjak tajam ke ~1.200 transaksi mulai jam 15:00, tetap tinggi sampai jam 20:00.
 
 **Insight:** 
-Aktivitas pelanggan terkonsentrasi di window sore-malam selama lima jam, membantah asumsi bahwa toko paling ramai saat jam makan siang. Kemungkinan besar ini didorong kebiasaan belanja sepulang kerja.
+Aktivitas pelanggan terkonsentrasi di window sore-malam selama lima jam, menunjukkan bahwa volume transaksi dalam kumpulan data ini terkonsentrasi pada sore dan malam hari, bukan di sekitar waktu makan siang. Salah satu kemungkinan penjelasannya adalah perilaku berbelanja setelah pulang kerja, meskipun kumpulan data tersebut tidak mencatat secara langsung pekerjaan pelanggan ataupun tujuan perjalanan mereka.
 
 **Rekomendasi:** 
 Kurangi jumlah staf pagi ke level minimum fungsional; konsentrasikan tenaga kerja dan jadwal restocking di window 15:00-20:00 untuk mencegah antrean panjang di kasir.
@@ -125,7 +125,7 @@ Perluas ruang display fisik untuk kategori dengan volume tinggi; jangan berasums
 Perbandingan revenue year-over-year per cabang (2022 vs. 2023), dengan flag sample size minimum (≥20 transaksi/tahun) untuk membedakan sinyal yang reliable dari noise.
 
 **Temuan:** 
-Beberapa cabang menunjukkan penurunan revenue yang tampak signifikan, tapi sebagian besar punya jumlah transaksi tahunan yang sangat rendah (sering di bawah 20), membuat persentase perubahannya tidak reliable secara statistik di level cabang individual.
+Beberapa cabang menunjukkan penurunan revenue yang tampak signifikan, tapi sebagian besar punya jumlah transaksi tahunan yang sangat rendah (sering di bawah 20), membedakan sinyal yang berpotensi dapat diandalkan dari perubahan yang didorong oleh volume transaksi yang sangat rendah.
 
 **Insight:** 
 Tanpa pengecekan ini, cabang dengan volume rendah bisa saja salah dilaporkan sebagai "krisis" operasional hanya berdasarkan segelintir transaksi.
