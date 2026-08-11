@@ -59,7 +59,7 @@ walmart-retail-analytics-validated/
 ├── data/
 │   ├── Walmart.csv
 │   └── walmart_clean_data.csv
-└── Walmart_sales_analysis_project.ipynb
+└── walmart_sales_analysis_project.ipynb
 ```
 
 Database credentials are loaded from a local `.env` file (not committed to this repo) via `python-dotenv` — see [How to Run](#️-how-to-run) for setup.
@@ -158,7 +158,7 @@ This second fix also led to the **strongest finding in the entire analysis** —
    DB_PORT=5432
    DB_NAME=your_database_name
    ```
-5. Open `Walmart_sales_analysis_project.ipynb` and run all cells sequentially.
+5. Open `walmart_sales_analysis_project.ipynb` and run all cells sequentially.
 
 ---
 
