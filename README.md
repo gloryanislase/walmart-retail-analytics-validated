@@ -139,7 +139,7 @@ This second fix also led to the **strongest finding in the entire analysis** —
 
 | File | Contents |
 |---|---|
-| [`Walmart_sales_analysis_project.ipynb`](./Walmart_sales_analysis_project.ipynb) | Full notebook: data cleaning, SQL queries, visualizations, and business interpretation for every finding above |
+| [`Walmart_sales_analysis_project.ipynb`](./walmart_sales_analysis_project.ipynb) | Full notebook: data cleaning, SQL queries, visualizations, and business interpretation for every finding above |
 
 ---
 
