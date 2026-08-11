@@ -6,7 +6,7 @@
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
 [![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](#)
 
-A SQL + Python analysis of Walmart branch transaction data, uncovering operational patterns in staffing, seasonality, and branch performance — with a deliberate focus on statistically sound conclusions, not just surface-level trends.
+A SQL + Python analysis of Walmart branch transaction data, uncovering operational patterns in staffing, seasonality, and branch performance — with a deliberate focus on statistically sound conclusions.
 
 **Data source:** Walmart retail transaction dataset (Kaggle)
 
@@ -17,7 +17,7 @@ A SQL + Python analysis of Walmart branch transaction data, uncovering operation
 - [Key Highlights](#-key-highlights)
 - [About This Project](#-about-this-project)
 - [Tech Stack](#-tech-stack)
-- [Analytical Rigor: What Sets This Apart](#-analytical-rigor-what-sets-this-apart)
+- [Analytical Rigor](#-analytical-rigor-what-sets-this-apart)
 - [Key Findings](#-key-findings)
 - [Sample Results](#-sample-results)
 - [How to Run](#️-how-to-run)
@@ -77,7 +77,7 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 
 ---
 
-## 🔍 Analytical Rigor: What Sets This Apart
+## 🔍 Analytical Rigor
 
 This project deliberately goes beyond "run a query, report the number." During analysis, two methodological issues were identified and corrected before finalizing conclusions:
 
@@ -139,7 +139,7 @@ This second fix also led to the **strongest finding in the entire analysis** —
 
 | File | Contents |
 |---|---|
-| [`Walmart_sales_analysis_project.ipynb`](./walmart_sales_analysis_project.ipynb) | Full notebook: data cleaning, SQL queries, visualizations, and business interpretation for every finding above |
+| [`walmart_sales_analysis_project.ipynb`](./walmart_sales_analysis_project.ipynb) | Full notebook: data cleaning, SQL queries, visualizations, and business interpretation for every finding above |
 
 ---
 
