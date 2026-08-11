@@ -17,8 +17,8 @@ Analisis data transaksi cabang Walmart menggunakan SQL + Python untuk mengungkap
 - [Sekilas Hasil](#-sekilas-hasil)
 - [Tentang Proyek Ini](#-tentang-proyek-ini)
 - [Tech Stack](#-tech-stack)
-- [Kedalaman Analitis](#-kedalaman-analitis)
 - [Temuan Utama](#-temuan-utama)
+- [Kedalaman Analitis](#-kedalaman-analitis)
 - [Sampel Hasil](#-sampel-hasil)
 - [Cara Menjalankan](#️-cara-menjalankan)
 - [Kontak](#-kontak)
@@ -76,19 +76,6 @@ Kredensial database dimuat dari file `.env` lokal (tidak ikut di-commit ke repo 
 | **Bahasa** | Python |
 | **Libraries** | Pandas (manipulasi data), SQLAlchemy (koneksi DB), Matplotlib & Seaborn (visualisasi), python-dotenv (manajemen kredensial) |
 | **Environment** | Jupyter Notebook |
-
----
-
-## 🔍 Kedalaman Analitis
-
-Selama proses analisis, ditemukan dan diperbaiki dua isu metodologi sebelum kesimpulan difinalisasi:
-
-| Isu yang Ditemukan | Masalah | Perbaikan yang Diterapkan |
-|---|---|---|
-| **Sample size terlalu kecil di perbandingan YoY per cabang** | Beberapa cabang tampak mengalami "penurunan revenue 60%", tapi jumlah transaksi yang mendasarinya cuma 7-19 per tahun — terlalu sedikit untuk jadi sinyal yang reliable | Ditambahkan ambang batas sample size minimum (≥20 transaksi/tahun) untuk menandai penurunan mana yang benar-benar bermakna secara statistik vs. yang kemungkinan besar cuma noise |
-| **Bias data partial-year di analisis musiman bulanan** | Data 2019 cuma tersedia untuk Januari-Maret; kalau ikut digabung ke agregat bulanan, angka Q1 jadi menggelembung secara artifisial dibanding bulan lain | Data 2019 dikeluarkan dari analisis musiman bulanan, hanya memakai tahun yang lengkap (2020-2023) untuk perbandingan antar bulan yang adil |
-
-Perbaikan kedua ini juga yang mengungkap **temuan paling kuat di seluruh analisis** — lonjakan volume transaksi ~9x lipat di bulan November-Desember.
 
 ---
 
@@ -152,6 +139,19 @@ Kartu kredit memimpin secara keseluruhan (4.200+ transaksi), tapi e-wallet jadi 
 
 **Insight:** 
 Infrastruktur pembayaran digital sebaiknya diprioritaskan di seluruh perusahaan, sementara isu kualitas layanan tampaknya spesifik per cabang, bukan sistemik — mendukung pendekatan audit layanan yang disesuaikan per cabang, bukan kebijakan yang seragam.
+
+---
+
+## 🔍 Kedalaman Analitis
+
+Selama proses analisis, ditemukan dan diperbaiki dua isu metodologi sebelum kesimpulan difinalisasi:
+
+| Isu yang Ditemukan | Masalah | Perbaikan yang Diterapkan |
+|---|---|---|
+| **Sample size terlalu kecil di perbandingan YoY per cabang** | Beberapa cabang tampak mengalami "penurunan revenue 60%", tapi jumlah transaksi yang mendasarinya cuma 7-19 per tahun — terlalu sedikit untuk jadi sinyal yang reliable | Ditambahkan ambang batas sample size minimum (≥20 transaksi/tahun) untuk menandai penurunan mana yang benar-benar bermakna secara statistik vs. yang kemungkinan besar cuma noise |
+| **Bias data partial-year di analisis musiman bulanan** | Data 2019 cuma tersedia untuk Januari-Maret; kalau ikut digabung ke agregat bulanan, angka Q1 jadi menggelembung secara artifisial dibanding bulan lain | Data 2019 dikeluarkan dari analisis musiman bulanan, hanya memakai tahun yang lengkap (2020-2023) untuk perbandingan antar bulan yang adil |
+
+Perbaikan kedua ini juga yang mengungkap **temuan paling kuat di seluruh analisis** — lonjakan volume transaksi ~9x lipat di bulan November-Desember.
 
 ---
 
