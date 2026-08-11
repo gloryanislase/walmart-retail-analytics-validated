@@ -111,7 +111,7 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 ### 4️⃣ Branch-Level YoY Revenue Decline
 **Methodology:** Year-over-year revenue comparison per branch (2022 vs. 2023), with a minimum sample size flag (≥20 transactions/year) added to distinguish reliable signals from noise.
 
-**Findings:** Several branches show an apparent revenue decline, but most have very low annual transaction counts (often under 20), making the percentage changes statistically unreliable at the individual branch level.
+**Findings:** Several branches show an apparent revenue decline, but most have very low annual transaction counts (often under 20), to distinguish potentially reliable signals from changes driven by very low transaction volume.
 
 **Insight:** Without this check, low-volume branches could have been misreported as operational "crises" based on a handful of transactions.
 
