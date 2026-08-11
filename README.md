@@ -95,7 +95,7 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 
 **Findings:** Volume stays flat (300-400 transactions) from 06:00-14:00, then spikes sharply to ~1,200 transactions from 15:00 onward, staying elevated until 20:00.
 
-**Insight:** Customer activity is concentrated in a five-hour evening window, disproving the assumption that stores peak during the lunch hour. This is likely driven by post-work shopping habits.
+**Insight:** Customer activity is concentrated in a five-hour evening window, showing that transaction volume in this dataset is concentrated in the afternoon and evening rather than around lunch. One possible explanation is post-work shopping behavior, although the dataset does not directly capture customer occupation or trip purpose.
 
 **Recommendation:** Reduce morning staffing to a functional minimum; concentrate manpower and restocking schedules around the 15:00-20:00 window to prevent checkout bottlenecks.
 
@@ -130,7 +130,7 @@ During analysis, two methodological issues were identified and corrected before 
 
 | Issue Found | Problem | Fix Applied |
 |---|---|---|
-| **Small sample size in branch-level YoY comparison** | Several branches appeared to show a "60% revenue decline," but the underlying transaction counts were as low as 7-19 per year — far too small to be a reliable signal | Added a minimum sample size threshold (≥20 transactions/year) to flag which declines are statistically meaningful vs. likely noise |
+| **Small sample size in branch-level YoY comparison** | Several branches appeared to show a "60% revenue decline," but the underlying transaction counts were as low as 7-19 per year — far too small to be a reliable signal | Added a minimum sample size threshold (≥20 transactions/year) to distinguish potentially reliable signals from changes driven by very low transaction volume vs. likely noise |
 | **Partial-year data bias in monthly seasonality** | 2019 only contains January-March records; including it in a monthly aggregate would artificially inflate Q1 figures relative to other months | Excluded 2019 from the monthly seasonality analysis, using only complete years (2020-2023) for a fair month-to-month comparison |
 
 This second fix also led to the **strongest finding in the entire analysis** — a ~9x spike in transaction volume during November-December.
