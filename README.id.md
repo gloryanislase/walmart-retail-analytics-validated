@@ -17,7 +17,7 @@ Analisis data transaksi cabang Walmart menggunakan SQL + Python untuk mengungkap
 - [Sekilas Hasil](#-sekilas-hasil)
 - [Tentang Proyek Ini](#-tentang-proyek-ini)
 - [Tech Stack](#-tech-stack)
-- [Kedalaman Analitis](#-kedalaman-analitis-yang-membedakan-proyek-ini)
+- [Kedalaman Analitis](#-kedalaman-analitis)
 - [Temuan Utama](#-temuan-utama)
 - [Sampel Hasil](#-sampel-hasil)
 - [Cara Menjalankan](#️-cara-menjalankan)
@@ -27,20 +27,20 @@ Analisis data transaksi cabang Walmart menggunakan SQL + Python untuk mengungkap
 
 ## 📸 Sekilas Hasil
 
-<img src="./assets/03_monthly_seasonality.png" alt="Grafik batang volume transaksi bulanan 2020-2023, menunjukkan lonjakan drastis di bulan November dan Desember" width="720">
+<img src="./assets/01_revenue_by_category.png" alt="Grafik batang total revenue per kategori produk, dengan Fashion accessories dan Home and lifestyle memimpin" width="720">
 
 <img src="./assets/02_hourly_trend.png" alt="Grafik garis volume transaksi per jam, menunjukkan puncak tajam antara jam 15:00-20:00" width="720">
 
-<img src="./assets/01_revenue_by_category.png" alt="Grafik batang total revenue per kategori produk, dengan Fashion accessories dan Home and lifestyle memimpin" width="720">
+<img src="./assets/03_monthly_seasonality.png" alt="Grafik batang volume transaksi bulanan 2020-2023, menunjukkan lonjakan drastis di bulan November dan Desember" width="720">
 
 ---
 
 ## 📌 Tentang Proyek Ini
 
-**Tujuan:** 
+**Tujuan**  
 Mengidentifikasi tren revenue, mengevaluasi performa kategori produk, dan memetakan pola belanja pelanggan di berbagai cabang Walmart — menerjemahkan data transaksi mentah menjadi rekomendasi actionable untuk penjadwalan staf, perencanaan inventori, dan penyelarasan kalender marketing.
 
-**Metodologi:** 
+**Metodologi**  
 Data diekstrak dan diagregasi menggunakan query PostgreSQL untuk menjawab pertanyaan bisnis operasional yang spesifik, lalu diproses dengan Pandas dan divisualisasikan dengan Matplotlib/Seaborn di Python.
 
 <details>
