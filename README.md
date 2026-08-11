@@ -27,11 +27,11 @@ A SQL + Python analysis of Walmart branch transaction data, uncovering operation
 
 ## 📸 Key Highlights
 
-<img src="./assets/03_monthly_seasonality.png" alt="Bar chart of monthly transaction volume from 2020-2023, showing a dramatic spike in November and December" width="720">
-
-<img src="./assets/02_hourly_trend.png" alt="Line chart of transaction volume by hour of day, showing a sharp peak between 15:00 and 20:00" width="720">
-
 <img src="./assets/01_revenue_by_category.png" alt="Bar chart of total revenue by product category, with Fashion accessories and Home and lifestyle leading" width="720">
+<p align="center">
+  <img src="./assets/03_monthly_seasonality.png.png" width="48%" />
+  <img src="./assets/02_hourly_trend.png" width="48%" />
+</p>
 
 ---
 
