@@ -17,8 +17,8 @@ A SQL + Python analysis of Walmart branch transaction data, uncovering operation
 - [Key Highlights](#-key-highlights)
 - [About This Project](#-about-this-project)
 - [Tech Stack](#-tech-stack)
-- [Analytical Rigor](#-analytical-rigor-what-sets-this-apart)
 - [Key Findings](#-key-findings)
+- [Analytical Rigor](#-analytical-rigor-what-sets-this-apart)
 - [Sample Results](#-sample-results)
 - [How to Run](#️-how-to-run)
 - [Contact](#-contact)
@@ -79,19 +79,6 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 
 ---
 
-## 🔍 Analytical Rigor
-
-During analysis, two methodological issues were identified and corrected before finalizing conclusions:
-
-| Issue Found | Problem | Fix Applied |
-|---|---|---|
-| **Small sample size in branch-level YoY comparison** | Several branches appeared to show a "60% revenue decline," but the underlying transaction counts were as low as 7-19 per year — far too small to be a reliable signal | Added a minimum sample size threshold (≥20 transactions/year) to flag which declines are statistically meaningful vs. likely noise |
-| **Partial-year data bias in monthly seasonality** | 2019 only contains January-March records; including it in a monthly aggregate would artificially inflate Q1 figures relative to other months | Excluded 2019 from the monthly seasonality analysis, using only complete years (2020-2023) for a fair month-to-month comparison |
-
-This second fix also led to the **strongest finding in the entire analysis** — a ~9x spike in transaction volume during November-December.
-
----
-
 ## 📊 Key Findings
 
 ### 1️⃣ Monthly Seasonality
@@ -134,6 +121,19 @@ This second fix also led to the **strongest finding in the entire analysis** —
 **Findings:** Credit cards lead overall (4,200+ transactions), but e-wallets are the top choice at the branch level in most locations — cash lags well behind both. Satisfaction ratings are highly location-dependent (e.g. "Health and beauty" scores 9.8 at one branch vs. 6.9 at another for the same category).
 
 **Insight:** Digital payment infrastructure should be prioritized company-wide, while service quality issues appear to be branch-specific rather than systemic — supporting a tailored, per-branch service audit rather than a blanket policy.
+
+---
+
+## 🔍 Analytical Rigor
+
+During analysis, two methodological issues were identified and corrected before finalizing conclusions:
+
+| Issue Found | Problem | Fix Applied |
+|---|---|---|
+| **Small sample size in branch-level YoY comparison** | Several branches appeared to show a "60% revenue decline," but the underlying transaction counts were as low as 7-19 per year — far too small to be a reliable signal | Added a minimum sample size threshold (≥20 transactions/year) to flag which declines are statistically meaningful vs. likely noise |
+| **Partial-year data bias in monthly seasonality** | 2019 only contains January-March records; including it in a monthly aggregate would artificially inflate Q1 figures relative to other months | Excluded 2019 from the monthly seasonality analysis, using only complete years (2020-2023) for a fair month-to-month comparison |
+
+This second fix also led to the **strongest finding in the entire analysis** — a ~9x spike in transaction volume during November-December.
 
 ---
 
