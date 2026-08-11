@@ -113,7 +113,7 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 
 **Insight:** Without this check, low-volume branches could have been misreported as operational "crises" based on a handful of transactions.
 
-**Recommendation:** Prioritize branches meeting the minimum sample size threshold for investigation; treat findings from low-volume branches as preliminary signals requiring more data before action is taken.
+**Recommendation:** Prioritize branches meeting the minimum data sufficiency threshold for investigation; treat findings from low-volume branches as preliminary signals requiring more data before action is taken.
 
 ### 5️⃣ Payment Method & Customer Satisfaction
 **Findings:** Credit cards lead overall (4,200+ transactions), but e-wallets are the top choice at the branch level in most locations — cash lags well behind both. Satisfaction ratings are highly location-dependent (e.g. "Health and beauty" scores 9.8 at one branch vs. 6.9 at another for the same category).
