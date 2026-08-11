@@ -37,11 +37,11 @@ A SQL + Python analysis of Walmart branch transaction data, uncovering operation
 
 ## 📌 About This Project
 
-**Objective:** 
+**Objective:**  
 
 To identify revenue trends, evaluate product category performance, and map customer shopping patterns across Walmart branches — translating raw transaction data into actionable recommendations for labor scheduling, inventory planning, and marketing calendar alignment.
 
-**Methodology:** 
+**Methodology:**  
 
 Data was extracted and aggregated using PostgreSQL queries to answer specific operational business questions, then processed with Pandas and visualized with Matplotlib/Seaborn in Python.
 
