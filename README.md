@@ -97,7 +97,7 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 
 **Insight:** Customer activity is concentrated in a five-hour evening window, showing that transaction volume in this dataset is concentrated in the afternoon and evening rather than around lunch. One possible explanation is post-work shopping behavior, although the dataset does not directly capture customer occupation or trip purpose.
 
-**Recommendation:** Reduce morning staffing to a functional minimum; concentrate manpower and restocking schedules around the 15:00-20:00 window to prevent checkout bottlenecks.
+**Recommendation:** Rebalance staffing toward the 15:00–20:00 peak period, while maintaining sufficient morning coverage for opening, replenishment, and operational tasks.
 
 ### 3️⃣ Category Revenue & Profit
 **Methodology:** Total revenue and profit by product category.
@@ -111,7 +111,7 @@ Database credentials are loaded from a local `.env` file (not committed to this 
 ### 4️⃣ Branch-Level YoY Revenue Decline
 **Methodology:** Year-over-year revenue comparison per branch (2022 vs. 2023), with a minimum sample size flag (≥20 transactions/year) added to distinguish reliable signals from noise.
 
-**Findings:** Several branches show an apparent revenue decline, but most have very low annual transaction counts (often under 20), to distinguish potentially reliable signals from changes driven by very low transaction volume.
+**Findings:**Several branches show an apparent revenue decline, but most have very low annual transaction counts (often under 20). This makes the observed decline difficult to interpret reliably without additional data.
 
 **Insight:** Without this check, low-volume branches could have been misreported as operational "crises" based on a handful of transactions.
 
