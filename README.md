@@ -18,7 +18,7 @@ A SQL + Python analysis of Walmart branch transaction data, uncovering operation
 - [About This Project](#-about-this-project)
 - [Tech Stack](#-tech-stack)
 - [Key Findings](#-key-findings)
-- [Analytical Rigor](#-analytical-rigor-what-sets-this-apart)
+- [Analytical Rigor](#-analytical-rigor)
 - [Sample Results](#-sample-results)
 - [How to Run](#️-how-to-run)
 - [Contact](#-contact)
